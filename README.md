@@ -17,3 +17,6 @@ To uninstall
 ```
 sudo make uninstall
 ```
+Example, My Avatar
+
+![image](https://github.com/user-attachments/assets/20205f0c-0698-486b-9197-766a0bc711f2)
