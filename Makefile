@@ -1,10 +1,24 @@
 OUTPUT = asciigen
 MAIN = main.py
+
+ifeq ($(OS),Windows_NT)
+    INSTALL_DIR = C:/Program Files/asciigen
+    RM = del
+    MV = move
+else
+    INSTALL_DIR = /usr/local/bin/
+    RM = rm -f
+    MV = mv
+endif
+
 $(OUTPUT): $(MAIN)
-	python -m PyInstaller --onefile $(MAIN) && mv ./dist/main ./asciigen
+	python -m PyInstaller --onefile $(MAIN) && $(MV) ./dist/main $(OUTPUT)
+
 install: $(OUTPUT)
-	mv $(OUTPUT) /usr/local/bin/
+	$(MV) $(OUTPUT) $(INSTALL_DIR)
+
 uninstall:
-	rm /usr/local/bin/$(OUTPUT)
+	$(RM) $(INSTALL_DIR)$(OUTPUT)
+
 clean:
-	rm -rf build dist $(OUTPUT) *.spec
+	$(RM) -rf build dist $(OUTPUT) *.spec
