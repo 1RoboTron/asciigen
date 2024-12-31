@@ -11,7 +11,7 @@ sudo make install
 ```
 To clean temp files, use
 ```
-sudo make clean
+make clean
 ```
 To uninstall
 ```
