@@ -1,7 +1,7 @@
 .PHONY: all install uninstall clean
 all: asciigen
 asciigen:
-	tar -cf venv.tar.gz && ./venv/bin/python -m PyInstaller --onefile main.py -n asciigen && mv ./dist/asciigen ./
+	tar -xf venv.tar.gz && ./venv/bin/python -m PyInstaller --onefile main.py -n asciigen && mv ./dist/asciigen ./
 install: asciigen
 	mv asciigen /usr/local/bin/
 uninstall:
