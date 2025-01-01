@@ -17,14 +17,8 @@ To uninstall
 ```
 sudo make uninstall
 ```
-PyInstaller + Pillow is used for compilation  , so Download it
-```
-pip install PyInstaller Pillow
-```
+
 Example, My Avatar
 
 ![image](https://github.com/user-attachments/assets/20205f0c-0698-486b-9197-766a0bc711f2)
 
-This program is for Windows and Linux
-
-But on Windows it is more difficult to install
