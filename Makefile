@@ -7,4 +7,4 @@ install: asciigen
 uninstall:
 	rm -f /usr/local/bin/asciiconv
 clean:
-	rm -rf build dist __pycache__ asciigen.spec asciigen venv
+	rm -rf build dist __pycache__ asciiconv.spec asciiconv venv
